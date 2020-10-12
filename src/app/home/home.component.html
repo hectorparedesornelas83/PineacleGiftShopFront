@@ -1,0 +1,23 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Image</th>
+      <th scope="col">Price</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.name}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.imageurl}}</td>
+      <td>{{product.price}}</td>
+      <td>
+        <a class="btn btn-primary btn-sm" routerLink="/form/{{product.id}}">Ver/Editar</a>
+        <a class="btn btn-primary btn-sm btn-danger"  (click)="delete(product.id)">Eliminar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

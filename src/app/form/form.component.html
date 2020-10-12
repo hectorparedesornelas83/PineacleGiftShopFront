@@ -1,0 +1,20 @@
+<h2>Crear producto</h2>
+<div>
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input [(ngModel)]="product.name" type="text" class="form-control" id="name" placeholder="Ingresar Nombre">
+  </div>
+  <div class="form-group">
+    <label for="description">Descripcion</label>
+    <textarea [(ngModel)]="product.description" class="form-control" id="description" placeholder="Ingresar Descripcion"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="imageurl">Imagen</label>
+    <input [(ngModel)]="product.imageurl" type="text" class="form-control" id="imageurl" placeholder="Ingresar Imagen">
+  </div>
+  <div class="form-group">
+    <label for="price">Precio</label>
+    <input [(ngModel)]="product.price" type="number" class="form-control" id="price" placeholder="Ingresar Precio">
+  </div>
+  <button (click)="saveProduct()" class="btn btn-primary btn-block">Guardar</button>
+</div>
